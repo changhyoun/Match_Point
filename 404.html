@@ -21,15 +21,16 @@
     <script type="text/javascript">
       // 404 페이지에서 원래 URL로 리다이렉트
       (function() {
-        // 원래 URL을 쿼리 스트링으로 변환
+        // 현재 URL을 가져옵니다.
         var originalUrl = window.location.pathname + window.location.search + window.location.hash;
-        var newUrl = '/Match_Point/' + '?' + encodeURIComponent(originalUrl);
 
-        // 원래 URL로 리다이렉트
+        // 쿼리 스트링을 통해 원래 URL을 인코딩하여 전달합니다.
         if (!window.location.search) {
+          var newUrl = '/Match_Point/?redirect=' + encodeURIComponent(originalUrl);
           window.location.replace(newUrl);
         } else {
-          var originalPath = decodeURIComponent(window.location.search.substring(1));
+          // 원래 URL을 복원합니다.
+          var originalPath = decodeURIComponent(window.location.search.substring(10)); // 'redirect=' 이후를 가져옵니다.
           history.replaceState(null, '', originalPath);
         }
       })();
