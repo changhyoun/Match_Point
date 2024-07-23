@@ -18,5 +18,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="text/javascript">
+      // 404 페이지에서 원래 URL로 리다이렉트
+      (function() {
+        // 원래 URL을 쿼리 스트링으로 변환
+        var originalUrl = window.location.pathname + window.location.search + window.location.hash;
+        var newUrl = '/Match_Point/' + '?' + encodeURIComponent(originalUrl);
+
+        // 원래 URL로 리다이렉트
+        if (!window.location.search) {
+          window.location.replace(newUrl);
+        } else {
+          var originalPath = decodeURIComponent(window.location.search.substring(1));
+          history.replaceState(null, '', originalPath);
+        }
+      })();
+    </script>
   </body>
 </html>
