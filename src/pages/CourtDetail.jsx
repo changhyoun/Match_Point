@@ -154,7 +154,6 @@ function CourtDetail() {
                         modules={[Autoplay, Navigation]}
                         spaceBetween={50}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
                         pagination={{ clickable: true }}
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                         navigation={slides.length > 1 ? {

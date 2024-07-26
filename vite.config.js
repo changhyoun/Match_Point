@@ -37,13 +37,13 @@ export default defineConfig({
     namedExports: true,
     stringify: false,
   },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://dapi.kakao.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://dapi.kakao.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, '')
+  //     }
+  //   }
+  // }
 });

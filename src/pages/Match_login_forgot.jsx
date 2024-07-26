@@ -34,21 +34,18 @@ function Match_login_forgot() {
 
     useEffect(() => {
         if (showPopup) {
-            console.log('아이디 찾기 팝업이 보입니다.');
             const findIdImage = document.querySelector('.findIdImage')
             findIdImage.classList.add('rotate')
         }
     }, [showPopup]);
     useEffect(() => {
         if (showPasswordPopup) {
-            console.log('비밀번호 찾기 팝업이 보입니다.');
             const findPwImage = document.querySelector('.findPwImage')
             findPwImage.classList.add('rotate')
         }
     }, [showPasswordPopup]);
     useEffect(() => {
         if (showNotFoundPopup) {
-            console.log('아이디ㆍ비밀번호 못찾은 팝업이 보입니다.');
             const notFindImage = document.querySelector('.notFindImage')
             notFindImage.classList.add('rotate')
         }
@@ -107,7 +104,7 @@ function Match_login_forgot() {
 
         // 데이터가 null인 경우 처리
         if (!storedUserData || !Array.isArray(storedUserData) || storedUserData.length === 0) {
-            alert('저장된 사용자 데이터가 없거나 잘못된 형식입니다.');
+            alert('정보를 입력해주세요');
             return;
         }
 
