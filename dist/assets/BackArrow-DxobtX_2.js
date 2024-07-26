@@ -1,0 +1,1 @@
+import{j as r}from"./index-C6HTT3CE.js";function o({BackArrow_txt:s}){return r.jsxs("button",{className:"BackArrow",children:[r.jsx("span",{className:"material-symbols-rounded",children:"arrow_back_ios"}),s]})}export{o as B};
