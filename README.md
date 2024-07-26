@@ -29,6 +29,6 @@
 ---
 
 ## 5. 설명
-- **설명:** 해당 프로젝트 Match_Point는 포트폴리오용으로 테니스 모바일 앱을 제작해봤습니다. 로컬스토리지와 weather api, kakao api, Emailjs, 테니스장 데이터를 활용하여 회원가입,로그인 및 피드백, 예약 시스템을 구축하였습니다. 더 자세한 내용은 https://changhyoun.github.io/Match_Point/를 통해 확인가능합니다.
+- **설명:** 해당 프로젝트 Match_Point는 포트폴리오용으로 테니스 모바일 앱을 제작해봤습니다. 로컬스토리지와 weather api, kakao api, Emailjs, 테니스장 데이터를 활용하여 회원가입,로그인 및 피드백, 예약 시스템을 구축하였습니다. 더 자세한 내용은 https://changhyoun.github.io/Match_Point/ 를 통해 확인가능합니다.
 
 
