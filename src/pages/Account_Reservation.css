@@ -1,0 +1,420 @@
+/* 예약 내역 페이지 */
+#Account_Reservation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+    /* 헤더 2 */
+    .Account_Reservation_hd {
+        width: 100%;
+        height: 40px;
+        background-color: #77B850;
+    }
+
+        .Account_Reservation_hd .Account_Reservation_hd_warp {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .Account_Reservation_hd .Account_Reservation_hd_warp h3 {
+                font-size: 1em;
+                font-weight: bold;
+                color: #f5f5f5;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+            }
+    /* 메인 */
+    #Account_Reservation .Account_Reservation_main {
+        height: calc(100% - 170px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    #Account_Reservation .Account_Reservation_main.no_active {
+        pointer-events: none;
+        position: relative;
+    }
+
+    #Account_Reservation .Account_Reservation_main.no_active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+
+    /* 메인 스크롤 스타일 */
+    #Account_Reservation .Account_Reservation_main::-webkit-scrollbar {
+        background-color: white;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25);
+        width: 5px;
+    }
+
+    #Account_Reservation .Account_Reservation_main::-webkit-scrollbar-thumb {
+        background: #77B850;
+        border-radius: 20px;
+        height: 30%;
+    }
+
+    .Account_Reservation_main .Account_Reservation_main_warp {
+        width: 90%;
+        position: relative;
+        padding-top: 8%;
+
+    }
+    /* 예약 내역 필터 */
+    .Account_Reservation_main_filter{
+        position: absolute;
+        top: 1.7%;
+        right: 0%;
+        z-index: 1000;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+        .Account_Reservation_main_filter .Account_Reservation_main_filter_custom {
+            position: relative;
+            display: inline-block;
+        }
+
+            .Account_Reservation_main_filter .filter_selected {
+               width: 150px;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                background-color: #fff;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: space-around;
+                height: 30px;
+            }
+
+                .Account_Reservation_main_filter .filter_selected .arrow{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                     .Account_Reservation_main_filter .filter_options {
+                         display: none;
+                         position: absolute;
+                         background-color: #fff;
+                         border: 1px solid #ccc;
+                         border-radius: 4px;
+                         z-index: 1000;
+                     }
+
+                        .Account_Reservation_main_filter .filter_options.show {
+                            display: block;
+                        }
+
+                            .Account_Reservation_main_filter .filter_options div {
+                                width: 150px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                            }
+                        
+                                .Account_Reservation_main_filter .filter_options div:hover {
+                                    background-color: #77B850;
+                                    color: #f5f5f5;
+                                }
+
+        /* 예약 내역 필터 끝 */        
+
+        .Account_Reservation_main_filter .reservation_item {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: box-shadow 0.2s;
+    }
+
+    .Account_Reservation_main_filter .reservation_item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+        /* Rmx/ */
+        .Account_Reservation_main_warp .reservation_items_all {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+            .Account_Reservation_main_warp .reservation_item .reservation_item_back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+                border-radius: 15px;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+                filter: brightness(0.6);
+            }
+
+    /* 예약 내역 없음 */
+    .Account_Reservation_main_warp .not_reservation {
+        background-color: #EEEEEE;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .Account_Reservation_main_warp .not_reservation img{
+            width: 110px;
+            filter: drop-shadow(1px 1px 1px rgba(0,0,0,.25))
+        }
+
+            .Account_Reservation_main_warp .not_reservation h3 {
+                font-family: "Binggrae";
+                font-size: 0.9em;
+                color: #989898;
+                margin: 1.5% 0%;
+            }
+
+            .Account_Reservation_main_warp .not_reservation p {
+                font-family: "Binggrae";
+                font-size: 0.7em;
+                color: #a8a8a8;
+            }
+
+            .reservation_item .reservation_details_warp {
+                width: 90%;
+                height: 90%;
+                z-index: 10;
+                display: flex;
+            }
+
+                .reservation_item .reservation_details_warp .reservation_details_lt {
+                    width: 70%;
+                    height: 100%;
+                    color: #f5f5f5;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+
+                .reservation_item .reservation_details_warp div h3 {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    width: 219px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .reservation_item .reservation_details_warp div span {
+                    font-family: 'BinggraeSamanco';
+                    font-size: 0.9em;
+                    padding: 2% 3%;
+                    border: 1px solid #f5f5f5;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                    border-radius: 30px;
+                }
+
+                .reservation_item .reservation_details_warp div p {
+                    font-family: "Binggrae";
+                    font-size: 0.8em;
+                    line-height: 1.8;
+                    width: 219px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                    .reservation_item .reservation_details_warp .reservation_time {
+                        margin: 8% 0;
+                    }
+
+                        .reservation_item .reservation_details_warp div .cancel_reservation {
+                            background: none;
+                            border: none;
+                            width: 110px;
+                            height: 38px;
+                            border-radius: 15px;
+                            border: 2px solid #f5f5f5;
+                            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            color: #f5f5f5;
+                            font-family: "Binggra-bold";
+                        }
+
+                            .reservation_item .reservation_details_warp div .cancel_reservation img {
+                                height: 70%;
+                            }
+
+            .reservation_item .reservation_details_warp .reservation_details_rt {
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                width: 30%;
+                height: 100%;
+            }
+
+                .reservation_item .reservation_details_warp .reservation_details_rt img {
+                    width: 80%;
+                }
+
+    /* 예약 취소 확인 팝업 */
+    .reservation_cancel_popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 291px;
+        height: 300px;
+        background-color: white;
+        z-index: -1;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease, z-index 0.3s ease;
+    }
+
+    .reservation_cancel_popup.active {
+        z-index: 150;
+        opacity: 1;
+    }
+
+        .reservation_cancel_popup .reservation_cancel_popup_warp {
+            width: 90%;
+            height: 90%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+            .reservation_cancel_popup .reservation_cancel_popup_warp h3 {
+                font-family: "Binggra-bold";
+                color: #333;
+                font-size: 1em;
+            }
+
+            .reservation_cancel_popup .reservation_cancel_popup_warp img{
+                transition: .5s ease;
+                transform: rotateY(270deg);
+            }
+
+            .reservation_cancel_popup .reservation_cancel_popup_warp p {
+                font-family: "Binggra";
+                color: #a3a3a3;
+                font-size: 0.9em;
+                line-height: 1.5;
+            }
+
+                .reservation_cancel_popup .reservation_cancel_popup_warp .reservation_cancel_popup_btn_warp {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                    .reservation_cancel_popup .reservation_cancel_popup_warp .reservation_cancel_popup_btn_warp button {
+                        width: 120px;
+                        height: 35px;
+                        border: none;
+                        background: none;
+                        border-radius: 15px;
+                        cursor: pointer;
+                        font-size: 0.8em;
+                    }
+
+                        .reservation_cancel_popup .reservation_cancel_popup_warp .reservation_cancel_popup_btn_warp button:nth-of-type(1) {
+                            background: linear-gradient(180deg, #8FED57, #6AA646);
+                            color: #f5f5f5;
+                        }
+
+                        .reservation_cancel_popup .reservation_cancel_popup_warp .reservation_cancel_popup_btn_warp button:nth-of-type(2) {
+                            color: #77B850;
+                            border: 1px solid #77B850;
+                        }
+
+    /* 예약 취소 완료 팝업 */
+    .reservation_cancel_sure_popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 291px;
+        height: 300px;
+        background-color: white;
+        z-index: -1;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.3s ease, z-index 0.3s ease;
+        text-align: center;
+    }
+
+    .reservation_cancel_sure_popup.active {
+        z-index: 1501;
+        opacity: 1;
+    }
+
+        .reservation_cancel_sure_popup h3 {
+            font-family: 'BinggraeSamanco-bold';
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5%;
+        }
+
+        .reservation_cancel_sure_popup span {
+            position: absolute;
+            bottom: -20%;
+            font-size: 2.5em;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            background: linear-gradient(180deg, #769b60 0%, #77B850 50%);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .reservation_cancel_sure_popup img{
+            transition: all 0.3s ease-in;
+            transform: scale(0);
+        }
+  
+
+                
+            
+
+            
+
+           
+
+  

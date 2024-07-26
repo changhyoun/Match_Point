@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'BinggraeSamanco';;
+  src: url(../public/BinggraeSamanco.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeSamanco-bold';
+  src: url(../public/BinggraeSamanco-Bold.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeMelona';
+  src: url(../public/BinggraeMelona.ttf)  format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeMelona-Bold';
+  src: url(../public/BinggraeMelona-Bold.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeII';
+  src: url(../public/BinggraeII.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeII-bold';
+  src: url(../public/BinggraeII-Bold.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'Binggrae';
+  src: url(../public/Binggrae.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'Binggra-bold';
+  src: url(../public/Binggrae-Bold.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'BinggraeTaom-bold';
+  src: url(../public/BinggraeTaom-Bold.ttf) format('opentype');
+
+}
+
+@import 'swiper/swiper-bundle.min.css';
+
+
+.App{
+  font-family: "Noto Sans KR", sans-serif;
+  
+  width: 393px; height: 852px;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .landscape-warning {
+      display: none !important;
+    }
+  
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    @media (orientation: landscape) {
+      .landscape-warning {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        z-index: 9999;
+      }
+      .App {
+        width: 100%;
+        height: 100%;
+      }
+      .landscape-warning span {
+        font-size: 2.5em;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #a1a1a1;
+        display: inline-block;
+        animation: wiggle 1.5s infinite cubic-bezier(0.45, 0.015, 0.355, 1);
+      }
+      .landscape-warning p {
+        font-size: 1.5em;
+        font-family: 'BinggraeSamanco';
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+    }
+    
+    @keyframes wiggle {
+      0% {
+        transform: translate(-50%, -50%) rotate(30deg);
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(-60deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(30deg);
+      }
+    }
+  
+    @media (orientation: portrait) {
+      .landscape-warning {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .App{
+      border-radius: 0px;
+    }
+
+  }

@@ -1,0 +1,296 @@
+/* 메인 페이지 */
+#Main{
+    width: 100%;
+    height: calc(100% - 68px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+
+}
+    /* 스크롤 스타일링 */
+    #Main::-webkit-scrollbar {
+        width: 6px;  
+    }
+
+    #Main::-webkit-scrollbar-thumb {
+        background: #77B850;
+        border-radius: 20px;
+        height: 50%;
+        background-clip: padding-box;
+    }
+
+    #Main::-webkit-scrollbar-track {
+        background: rgba(220, 20, 60, .1);
+    }
+    /* 메인 묶음 */
+    #Main #main_warp{
+        width: 100%;
+        height: 100%;
+    }
+
+        /* 섹션1 */
+        #main_warp .main_se1{
+            width: 100%;
+            height: 300px;
+          
+            background: url(../assets/Main_pg_back1.svg) no-repeat center/cover;
+            border-radius: 0 0 30px 30px;
+            display: flex;
+            align-items: center; justify-content: center;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+            /* 섹션1 묶음 */
+            .main_se1 > div{
+                width: 85%;
+                height: 80%;
+                position: relative;
+            }
+                /* 섹션1 메뉴 묶음 */
+                .main_se1 > div ul{
+                    width: 70%;
+                    height: 20%;
+                    display: flex;
+                    flex-direction: row;
+                }
+                    /* 섹션1 메뉴들 */
+                    .main_se1 > div li{
+                        width: 33.3%;
+                        height: 100%;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                    }
+
+                        .main_se1 > div li a{
+                            color: #f5f5f5a9;
+                            font-weight: 500;
+                            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                            transition: all .3s ease;
+                        }
+                        .main_se1 > div li a.active {
+                            position: relative;    
+                            color: #f5f5f5;
+                     
+                        }
+                        .main_se1 > div li a.active::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -6px;
+                            height: 4px;
+                            background: #70B248; 
+                            border-radius: 2px;
+                        }
+                        /* 섹션1 txt */
+                        .main_se1 > div p{
+                            margin-top: 50px;
+                            color: #f5f5f5;
+                            font-family: 'BinggraeMelona';
+                            font-size: 1.2em;
+                        }
+                            /* 섹션1 txt spna */
+                            .main_se1 > div p span{
+                                font-family: 'BinggraeMelona-bold';
+                            }
+        /* 섹션2 */
+        #main_warp .main_se2{
+            width: 100%;
+            height: 250px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            display: flex;
+            align-items: center; justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25), -2px -2px -2px rgba(0, 0, 0, 0.25);
+            border: 1px solid #E9E9E9;
+        }
+            /* 섹션2 묶음 */
+            .main_se2 > div{
+                width: 85%;
+                height: 80%;
+                position: relative;
+
+            }
+                /* 섹션2 날짜 */
+                .date_Warp h3{
+                    font-family: 'BinggraeMelona';
+                    color: #333;
+                    font-size: 1.1em;
+                }
+                /* 섹션2 날씨 지역 묶음 */
+                .date_location{
+                    width: 100%;
+                    display: flex;
+                    height: 80px;
+                    align-items: center;
+                    position: relative;
+                }
+                /* 섹션2 날씨 지역 새로고침 */
+                .date_location > .reload{
+                    position: absolute;
+                    right: 0;
+                    top: 40%;
+                    transform: translateY(-50%) scaleX(-1);
+                    cursor: pointer;
+                    color: #b1b1b1;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10);
+
+                }
+
+                    /* 섹션2 지역 관련 */
+                    .date_location_rt h3{
+                        font-family: 'BinggraeMelona-Bold';
+                        font-size: 1.1em;
+                    }
+                    .date_location_rt h3 span{
+                        color: #77B850;
+                        margin-right: 5%;                
+                    }
+                    .date_location_rt p{
+                        font-size: 0.7em;
+                        
+                    }
+                    /* 섹션2 날씨 관련 */
+                    .date_location_lt{
+                        width: 20%;
+                        display: flex;
+                        align-items: center;
+
+                    }
+                    .date_location_rt{
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+                        height: 100%;
+                    }
+
+                    /* 섹션2 남성 이미지 */
+                    .main_se2 .Main_pg_se2_ill{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 1;
+                        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+                    }
+                    /* 섹션2 배경 이미지 */
+                    .main_se2 .Main_pg_se2_back{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+                    }
+                    /* 섹션2 버튼 묶음 */
+                    .main_se2_button_wrap{
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        width: 250px;
+                        height: 80px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                     /* 섹션2 버튼 관련 */
+                    .main_se2_button_wrap a{
+                        width: 27%;
+                        height: 100%;
+                        z-index: 10;
+                    }
+                    .main_se2_button_wrap a img{
+                        width: 100%;
+                        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
+                    }
+                    .main_se2_button_wrap a p{
+                        font-size: 0.75em;
+                        text-align: center;
+                        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                    }
+        /* 섹션3 */
+        #main_warp .main_se3{
+            width: 100%;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; justify-content: center;
+            margin-top: 15px;
+            
+            
+        }
+         /* 섹션3 텍스트 그룹 */
+           .main_se3 .main_se3_tx{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+                /* 섹션3 텍스트 관련 */
+                .main_se3 .main_se3_tx h4{
+                    font-size: 0.8em;
+                    color: #A1A1A1;
+                    margin-left: 20px;
+                }
+                .main_se3 .main_se3_tx p{
+                    color: #A1A1A1;
+                    font-size: 0.7em;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+                    .main_se3 .main_se3_tx p span{
+                        font-size: 0.7em;
+                    }
+            /* 섹션3 스와이퍼 관련 */
+            .main_se3 .main_se3_slide{
+                width: 100%;
+                height: 240px;
+            }
+
+                .main_se3 .main_se3_slide .swiper{
+                    width: 100%;
+                    height: 100%;
+                }
+                    .main_se3 .main_se3_slide .swiper .swiper-wrapper{
+                        width: 100%;
+                        height: 100%;
+                        display: -webkit-inline-box 
+                    }
+                        .main_se3 .main_se3_slide .swiper .swiper-wrapper .swiper-slide{
+                            width: 100% !important;
+                            height: 100%;
+                        }
+                        .main_se3 .main_se3_slide .swiper .swiper-wrapper .swiper-slide .slide_box{
+                            height: calc(100% -40px) !important;
+                            overflow: hidden;
+                            border-radius: 30px;
+                        }
+                            .main_se3 .main_se3_slide .swiper .swiper-wrapper .swiper-slide .slide_box img{
+                                width: 100%;
+                                height: 100%;
+                                filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
+                                border-radius: 30px;
+                            }
+                                .main_se3 .main_se3_slide .swiper .swiper-wrapper .swiper-slide .slide_box_tx{
+                                    width: 100%;
+                                    height: 40px;
+                                    display: flex;
+                                    justify-content: center;
+                                    color: #BCBCBC;
+                                    font-size: 0.8em;
+                                }
+                
+                    
+
+                
+            
+
+            
+           
+        

@@ -1,0 +1,84 @@
+@media screen and (max-width: 768px) {
+    .App {
+      width: 100% !important;
+      height: 100% !important;
+    }
+        /* 통합 로그인 */
+        #Integrated_login{
+            width: 100%;
+            height: 100%;
+            background-position: 10% 10%;
+        }
+        /* 올 코트 */
+        .All_Court_main{
+            height: calc(100% - 170px);
+        }
+        .All_Court_hd .court_filter_select > div:nth-of-type(2) > div {
+            justify-content: center;
+        }
+
+        /* 코트 상세정보 */
+        .CourtDetail_main{
+            height: calc(100% - 170px);
+        }
+        /* 코트 예약내역 */ 
+        #Account_Reservation .Account_Reservation_main{
+            height: calc(100% - 170px);
+        }
+        
+        .feedback_box button svg{
+            width: 16px;
+            height: 16px;
+        }
+        .feedback form img{
+            height: 65%;
+        }
+        .feedback form p {
+            right: 3%;
+            font-size: 1.05em;
+        }
+        .feedback_box input{
+            width: 125px;
+            font-size: 0.6em;
+        }
+        .feedback_box button{
+            width: 80%;
+        }
+
+        
+        
+    
+  }
+
+@media screen and (max-width: 400px) {
+    /* 로그인 페이지 */
+    .Match_Signup_warp .Match_Signup_warp_inner form{
+        height: 500px;
+    }
+    .Match_Signup_warp_inner > img{
+        width: 40%;
+    }
+    .Match_Signup_warp .Match_Signup_warp_inner form > div{
+        height: 50px;
+    }
+    
+    .Match_Signup_warp .Match_Signup_warp_inner form > button{
+        height: 50px;
+    }
+    /* 올 코트 */
+    .portfolio_tx{
+        bottom: 15%;
+    }
+    .All_Court_hd .court_filter_select > div:nth-of-type(2) > div {
+        width: 90%;
+    }
+    /* 메인 페이지
+    #Main #main_warp{
+        height: auto;
+    } */
+
+    .main_se2 .Main_pg_se2_ill{
+        right: -3%;
+    }
+
+}

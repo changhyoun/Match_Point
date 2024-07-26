@@ -1,0 +1,25 @@
+.Relogin{
+    display: flex;
+    color: #333;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    flex-direction: column;
+    border: none;
+    font-size: 0.7em;
+    font-family: "Noto Sans KR", sans-serif;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+    .Relogin span{
+        margin-top: 3%;
+        color: #555;
+        font-size: 1.8em;
+    }
+
+
+
