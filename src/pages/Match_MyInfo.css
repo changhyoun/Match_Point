@@ -54,6 +54,7 @@
         #Match_MyInfo .myInfo_main_warp.blurred {
             pointer-events: none;
             position: relative;
+            height: fit-content;
         }
 
 
@@ -383,7 +384,7 @@
                                             }
                 /* 계정 탈퇴 팝업 */
                 .delete_account_popup{
-                    position: absolute;
+                    position: fixed;
                     top: 50%;
                     left: 50%;
                     background-color: white;
@@ -494,7 +495,7 @@
 
                 /* 아이디 비밀번호 변경 팝업 */
                 .myInfo_main .account_change_popup {
-                    position: absolute;
+                    position: fixed;
                     top: 50%;
                     left: 50%;
                     background-color: white;
@@ -598,10 +599,12 @@
                         padding-right: 40px;
                         width: calc(100% - 80px);
                         color: #666;
-                        font-size: 0.85em;
+                        font-size: .75em;
+                        height: 100%;
                         position: relative;
                         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
                         outline: none;
+                        min-width: 158px;
                     }
 
                     .myInfo_main .account_change_popup .account_change_popup_warp .id_rechange div input::placeholder,

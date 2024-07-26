@@ -36,11 +36,11 @@
       pointer-events: none;
       position: absolute;
       width: 100%;
-      height: 100vh;
       background-color: #111;
       opacity: 0.5;
       content: "";
       z-index: 101;
+      height: 200vh;
   }
 
      /* 코드 상세정보 메인 스크롤 스타일 */
@@ -276,7 +276,7 @@
       
       /* 예약 팝업 */
       .CourtDetail_main_reservation{
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         width: 291px;
@@ -390,7 +390,7 @@
 
         /* 예약 완료 팝업 */
         .CourtDetail_main_reservation_suc{
-          position: absolute;
+          position: fixed;
           top: 50%;
           left: 50%;
           width: 291px;
