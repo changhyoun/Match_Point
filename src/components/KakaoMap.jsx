@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { kakao_location } from '../pages/Images';
+import keys from '../../keys/keys';
 
 const KakaoMap = ({ latitude, longitude }) => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const KakaoMap = ({ latitude, longitude }) => {
         }
 
         const script = document.createElement('script');
-        script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=8f4963338543d76b368aaf27283c8133&autoload=false`;
+        script.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${keys.kakaoApiKey}&autoload=false`;
         script.async = true;
         script.onload = () => resolve(window.kakao);
         script.onerror = reject;
