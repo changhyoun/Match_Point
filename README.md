@@ -1,8 +1,14 @@
-# React + Vite
+# Match_Point
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 1. 프로젝트 개요
+- **프로젝트 이름:** Match_Point
+- **목표:** 포트폴리오용 테니스 코트 예약 사이트
+- **타겟 사용자:** 20 ~ 30대
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 2. 기능
+- **핵심 기능:** 로컬스토리지를 이용한 회원가입, 로그인 시스템과 예약 시스템 등
+- **추가 기능:** 메인 페이지의 API를 이용하여 현재 위치 정보의 날씨 표시, 각종 데이터를 이용하여 테니스장의 정보 표시 등

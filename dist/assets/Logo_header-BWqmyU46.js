@@ -1,1 +1,0 @@
-import{j as o}from"./index-DFTY--o6.js";const t="/Match_Point/assets/logo_white-DLSz0XXy.svg";function s(){return o.jsx("div",{id:"Logo_header",children:o.jsx("img",{src:t,alt:"logo_white"})})}export{s as L};
