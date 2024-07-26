@@ -4,6 +4,7 @@ import './components/Responsive.css';
 import './App.css';
 import Loading from './pages/Loading';
 
+
 const Integrated_login = lazy(() => import('./pages/Integrated_login'));
 const Match_login = lazy(() => import('./pages/Match_login'));
 const Match_Signup = lazy(() => import('./pages/Match_Signup'));
@@ -14,6 +15,7 @@ const All_Court = lazy(() => import('./pages/All_Court'));
 const CourtDetail = lazy(() => import('./pages/CourtDetail'));
 const Account_Reservation = lazy(() => import('./pages/Account_Reservation'));
 const Match_MyInfo = lazy(() => import('./pages/Match_MyInfo'));
+const Not_Found = lazy(() => import('./pages/Not_Found'));
 
 function App() {
     const BASE_URL = import.meta.env.BASE_URL;
@@ -54,6 +56,8 @@ function App() {
                         <Route path="/court/:id" element={<CourtDetail />} />
                         <Route path="/Account_Reservation" element={<Account_Reservation />} />
                         <Route path="/Match_MyInfo" element={<Match_MyInfo />} />
+                        <Route path="*" element={<Not_Found />} /> {/* 정의되지 않은 모든 경로에 대해 NotFound 컴포넌트를 표시 */}
+                        
                     </Routes>
                 </Suspense>
             </div>

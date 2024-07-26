@@ -49,7 +49,7 @@ const KakaoMap = ({ latitude, longitude }) => {
 
           // 확대 버튼 추가
           const zoomInButton = document.createElement('button');
-          zoomInButton.innerHTML = '✚';
+          zoomInButton.innerHTML = '🔎';
           zoomInButton.style.position = 'absolute';
           zoomInButton.style.backgroundColor = 'white'
           zoomInButton.style.boxShadow = '1px 1px 1px rgba(0, 0, 0, 0.15)'
@@ -79,7 +79,7 @@ const KakaoMap = ({ latitude, longitude }) => {
 
           // 축소 버튼 추가
           const zoomOutButton = document.createElement('button');
-          zoomOutButton.innerHTML = '⚊';
+          zoomOutButton.innerHTML = '➖';
           zoomOutButton.style.position = 'absolute';
           zoomOutButton.style.backgroundColor = 'white'
           zoomOutButton.style.border ='none';

@@ -201,6 +201,10 @@ export {Info_feedback_man}
 import delete_pop_man from "../assets/delete_pop_man.png"
 export {delete_pop_man}
 
+// 404 이미지
+import page_not_found from "../assets/page_not_found.png"
+export {page_not_found}
+
 
 
 
