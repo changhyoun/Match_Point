@@ -12,7 +12,7 @@ const KakaoMap = ({ latitude, longitude }) => {
         }
 
         const script = document.createElement('script');
-        script.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${keys.kakaoApiKey}&autoload=false`;
+        script.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${keys.kakaoJavApiKey}&autoload=false`;
         script.async = true;
         script.onload = () => resolve(window.kakao);
         script.onerror = reject;
