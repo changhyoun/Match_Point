@@ -15,6 +15,9 @@ export {login_back}
 import logo_white from "../assets/logo_white.svg"
 export {logo_white}
 
+import court_logo_white from "../assets/court_logo_white.svg"
+export {court_logo_white}
+
 // 포인트 기본 로고
 import MatchPoint_logo from "../assets/MatchPoint_logo.svg"
 export {MatchPoint_logo}

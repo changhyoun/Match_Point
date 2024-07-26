@@ -64,6 +64,9 @@ const KakaoMap = ({ latitude, longitude }) => {
           zoomInButton.style.outline = 'none';
           zoomInButton.style.width = '25px';
           zoomInButton.style.height = '25px';
+          zoomInButton.style.display = 'flex';
+          zoomInButton.style.alignItems = 'center';
+          zoomInButton.style.justifyContent = 'center';
 
           zoomInButton.style.borderRadius = '50%'
           zoomInButton.onclick = () => {
@@ -84,7 +87,6 @@ const KakaoMap = ({ latitude, longitude }) => {
           zoomOutButton.style.textShadow = '1px 1px 1px rgba(0, 0, 0, 0.15)'
           zoomOutButton.style.color = '#77B850'
           zoomOutButton.style.borderRadius = '50%'
-
           zoomOutButton.style.padding = '3px 5px';
           zoomOutButton.style.top = '50px';
           zoomOutButton.style.left = '10px';
@@ -93,6 +95,10 @@ const KakaoMap = ({ latitude, longitude }) => {
           zoomOutButton.style.zIndex = '100';
           zoomOutButton.style.width = '25px';
           zoomOutButton.style.height = '25px';
+          zoomOutButton.style.display = 'flex';
+          zoomOutButton.style.alignItems = 'center';
+          zoomOutButton.style.justifyContent = 'center';
+
           zoomOutButton.onclick = () => {
             const level = map.getLevel() + 1;
             if (level <= 9) { // 최대 지도 레벨인 9까지

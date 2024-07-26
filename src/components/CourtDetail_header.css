@@ -11,6 +11,11 @@
         position: unset;
     }
 
+    #CourtDetail_header img{
+        width: 59px;
+        height: 59px;
+    }
+
     #CourtDetail_header .CourtDetail_header_home{
         margin-right: 10%;
         color: #f5f5f5;
