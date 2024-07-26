@@ -16,5 +16,19 @@
 ---
 
 ## 3. 프로토타입
-![프로토타입 이미지](./src/assets/prototype.svg)
+![프로토타입 이미지](./src/assets/prototype.jpg)
 - **프로토타입:** 위의 이미지를 통해 대략적인 프로토타입을 이해하실수 있습니다. 그 외 나머지 기능들 및 ui는 다운로드 하여 확인가능합니다.
+
+--- 
+
+## 4. etc
+- **플랫폼:** 모바일 웹
+- **사용 기술:** react, js, css, html
+- **개발 인원:** front end 1명
+
+---
+
+## 5. 내용 소개
+- **플랫폼:** 해당 프로젝트 Match_Point는 포트폴리오용으로 테니스 모바일 앱을 제작해봤습니다. 로컬스토리지와 weather api, kakao api, Emailjs, 테니스장 데이터를 활용하여 회원가입,로그인 및 피드백, 예약 시스템을 구축하였습니다. 더 자세한 내용은 https://changhyoun.github.io/Match_Point/를 통해 확인가능합니다.
+
+
